@@ -1,4 +1,4 @@
 baseURL = "https://fachriansyahmni.github.io/"
 languageCode = "en-us"
 title = "HUGOOOOO"
-theme = "ananke"
+theme = "minimal"
