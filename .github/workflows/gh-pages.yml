@@ -5,14 +5,14 @@ on:
     branches:
       - main
     paths:
-      - "hago/**"
+      - "hugo/**"
 
 jobs:
   deploy:
     runs-on: ubuntu-20.04
     defaults:
       run:
-        working-directory: ./hago
+        working-directory: ./hugo
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
@@ -35,4 +35,4 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./hago/public
+          publish_dir: ./hugo/public
